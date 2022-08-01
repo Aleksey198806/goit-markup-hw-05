@@ -20,6 +20,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .link {
+  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -334,9 +335,18 @@ img {
   background-color: #ffffff;
   text-align: center;
 }
+.client-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--titles-color);
+}
 .client-list {
   display: flex;
-  justify-content: center;
   gap: 30px;
 }
 .client-link-icon {
@@ -361,15 +371,6 @@ img {
 .client-link-icon:hover,
 .client-link-icon:focus {
   border-color: #2196f3;
-}
-
-.client-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--titles-color);
 }
 
 /*----------footer------------*/
@@ -426,6 +427,7 @@ img {
 }
 
 .footer-partner-title {
+  margin-top: 0px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
