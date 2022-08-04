@@ -113,6 +113,7 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
@@ -145,7 +146,6 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts {
@@ -157,6 +157,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-icon {
   margin-right: 10px;
@@ -218,7 +219,7 @@ img {
   color: var(--first-font-btn-color);
   background-color: var(--first-bcg-btn-color);
   cursor: pointer;
-  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -338,7 +339,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-icon {
   fill: #afb1b8;
@@ -389,13 +391,15 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   cursor: pointer;
+}
+.client-link-icon,
+.client-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms lcubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link-icon:hover .client-icon,
@@ -487,6 +491,7 @@ img {
 
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .shadow {
@@ -500,7 +505,6 @@ img {
 .footer-partner-link:hover,
 .footer-partner-link:focus {
   background-color: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*----------PORTFOLIO PAGE-----------*/
@@ -550,7 +554,7 @@ img {
 .portfolio-list .portfolio-item-link {
   display: block;
   text-decoration: none;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms linear;
 }
 .porfolio-overlay {
   position: relative;
@@ -610,9 +614,11 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden.modal {
-  transform: translate(-50%, -50%);
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0) rotate(360deg);
 }
 .modal {
   position: absolute;
@@ -620,12 +626,12 @@ img {
   left: 50%;
 
   min-height: 528px;
-  min-width: 581px;
+  width: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -639,6 +645,6 @@ img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 1px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
