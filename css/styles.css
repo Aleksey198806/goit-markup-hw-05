@@ -204,6 +204,7 @@ img {
   text-transform: uppercase;
   color: var(--light-titles-color);
 }
+
 .hero-button {
   display: block;
   min-width: 221px;
